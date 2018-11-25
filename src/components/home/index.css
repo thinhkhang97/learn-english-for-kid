@@ -1,0 +1,87 @@
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-image: url('./images/background.jpg');
+}
+
+.container :hover{
+   
+}
+
+.left-container {
+    width: 100vh;
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+}
+
+.right-container {
+    height: 100vh;
+    flex: 0 1 80px;
+}
+
+/* Left container */
+.left-container .header {
+    flex: 0 1 50px;
+    display: flex;
+    align-items: center;
+}
+
+.left-container .content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row;
+}
+
+.content .area {
+    flex: 1 1 auto;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.area .title {
+    color: orange;
+    font-weight: 700;
+    margin: 10px 0;
+    font-size: 28px;
+}
+
+.area {
+
+}
+
+.area img{
+    max-width: 160px;
+    max-height: 160px;
+}
+
+.area .cell {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 200px;
+    margin: 20px 0;
+}
+
+.area  {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 4s;
+    transition-duration: 4s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .area :hover, .area :focus, .area :active {
+    -webkit-transform: scale(1.1) rotate(35deg);
+    transform: scale(1.1) rotate(15deg);
+    cursor: url('./images/rocket2.png'), auto;
+  }
