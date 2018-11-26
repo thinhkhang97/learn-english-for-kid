@@ -7,7 +7,7 @@
     justify-content: center;
 }
 
-.login-container .content{
+.login-container .login-content{
     height: 100vh;
     width: 400px;
     display: flex;
@@ -15,12 +15,12 @@
     justify-content: center;
 }
 
-.login-container .content .sign-up{
+.login-container .login-content .sign-up{
     display: flex;
     justify-content: flex-end;
 }
 
-.content a {
+.login-content a {
     color: orange;
     font-weight: 700;
 }

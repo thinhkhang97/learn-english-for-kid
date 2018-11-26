@@ -4,6 +4,8 @@ import Input from '../input';
 import Button from '../button';
 import { Link, withRouter } from 'react-router-dom';
 import swal from 'sweetalert2';
+import {connect} from 'react-redux';
+
 class Login extends Component {
     state = {
         username: '',
@@ -20,6 +22,7 @@ class Login extends Component {
             confirmButtonText: 'Đi tiếp nào!',
             onAfterClose: () => {
                 this.props.history.push('/');
+                this.props.dispatch({type: 'LOGIN', account: 'Khang'})
             }
         }
         const error = {
@@ -30,7 +33,7 @@ class Login extends Component {
         }
         return (
             <div className='login-container'>
-                <div className='content'>
+                <div className='login-content'>
                     <Link to='/'>
                         <img src={require('../../../images/logo/logo.svg')} />
                     </Link>
@@ -60,4 +63,4 @@ class Login extends Component {
     }
 }
 
-export default withRouter(Login);
+export default connect()(withRouter(Login));

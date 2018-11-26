@@ -3,6 +3,7 @@ import './index.css';
 import BarChart from './barchart';
 import PieChart from './piechart';
 import Menu from './navigation';
+import {Link} from 'react-router-dom';
 
 class Satisfy extends Component {
     state={
@@ -44,14 +45,17 @@ class Satisfy extends Component {
             <div className='satisfy-container' >
                 <div className='left-container'>
                     <div className='header'>
+                    <Link to='/'>
                         <img src={require('./images/logo.png')} onClick={() => 
-                            console.log('click logo')} />
+                                console.log('click logo')} />
+                    </Link>
+                        
                     </div>
                     <div className='sas-content'>
                         <piechart class="col-sm-5">
                             <form>
                                 <div class="form-group">
-                                    <label for="sel1">Chọn thời gian xem</label>
+                                    <label style={{fontWeight: 'bold'}} for="sel1">Chọn thời gian xem</label>
                                     <select class="form-control" id="sel1" 
                                     onChange={(e)=>{
                                         console.log('Option',e.target.value)
@@ -68,7 +72,7 @@ class Satisfy extends Component {
                         <barchart class="col-sm-5">
                             <form>
                                 <div class="form-group">
-                                    <label for="sel1">Chọn loại cần xem</label>
+                                    <label style={{fontWeight: 'bold'}} for="sel1">Chọn loại cần xem</label>
                                     <select class="form-control" id="sel1" onChange={(e)=>{
                                         console.log('Option',e.target.value)
                                         this.setState({typeChart: e.target.value})

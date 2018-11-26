@@ -4,7 +4,7 @@ import logo from './image/logo.png';
 import Topic from './Topic/topics'
 import TopicDetail from './Topic-Detail/TopicDetail'
 import CardItemDetail from './Card-Item-Detail/CardItemDetail';
-
+import {Link} from 'react-router-dom';
 class Learn extends Component {
 
     state = {
@@ -17,9 +17,11 @@ class Learn extends Component {
         return (
             <div>
                 <nav className="navbar navbar-none bg-none">
-                    <a className="navbar-brand">
-                        <img src={logo} />
-                    </a>
+                    <Link to='/'>
+                        <a className="navbar-brand">
+                            <img src={logo} />
+                        </a>
+                    </Link>
                 </nav>
 
                 <div className="container-fluid mr-md-3 mb-5">

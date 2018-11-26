@@ -2,18 +2,19 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
 import ReactTooltip from 'react-tooltip';
+import {connect} from 'react-redux';
 
 class Menu extends Component {
     render() {
         return (
             <div className='menu-container'>
-                <div className='menu-item'>
+                <div className='menu-item' style={{visibility: this.props.isLogin!==null ? 'hidden': 'initial'}}>
                     <Link to='/login'>
                         <img src={require('./images/login.png')} data-tip='Đăng nhập' />
                         <ReactTooltip />
                     </Link>
                 </div>
-                <div className='menu-item'>
+                <div className='menu-item' style={{visibility: this.props.isLogin!==null ? 'hidden': 'initial'}}>
                     <Link to='/register'>
                         <img src={require('./images/clipboard.png')} data-tip='Đăng Kí' />
                         <ReactTooltip />
@@ -41,5 +42,9 @@ class Menu extends Component {
         );
     }
 }
-
-export default Menu;
+const mapStateToProps = state => {
+    return {
+        isLogin: state.account
+    }
+}
+export default connect(mapStateToProps)(Menu);
