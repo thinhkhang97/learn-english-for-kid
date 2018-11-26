@@ -5,31 +5,7 @@ class BarChart extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            chartData: {
-                labels: ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7', 'Chủ Nhật'],
-                datasets: [
-                  {
-                    data: [
-                      6,
-                      4,
-                      8,
-                      9,
-                      10,
-                      1,
-                      2
-                    ],
-                    backgroundColor: [
-                      'rgba(75, 192, 192, 0.6)',
-                      'rgba(75, 192, 192, 0.6)',
-                      'rgba(75, 192, 192, 0.6)',
-                      'rgba(75, 192, 192, 0.6)',
-                      'rgba(75, 192, 192, 0.6)',
-                      'rgba(75, 192, 192, 0.6)',
-                      'rgba(75, 192, 192, 0.6)'
-                    ]
-                  }
-                ]
-              }
+            
         }
     }
 
@@ -40,10 +16,27 @@ class BarChart extends Component {
     }
 
     render() {
+        const chartData = {
+            labels: this.props.labels,
+            datasets: [
+              {
+                data: this.props.data,
+                backgroundColor: [
+                  'rgba(75, 192, 192, 0.6)',
+                  'rgba(75, 192, 192, 0.6)',
+                  'rgba(75, 192, 192, 0.6)',
+                  'rgba(75, 192, 192, 0.6)',
+                  'rgba(75, 192, 192, 0.6)',
+                  'rgba(75, 192, 192, 0.6)',
+                  'rgba(75, 192, 192, 0.6)'
+                ]
+              }
+            ]
+          }
         return (
             <div className="chart">
                 <Bar
-                    data={this.state.chartData}
+                    data={chartData}
                     width={80}
 	                height={56}
                     options={{

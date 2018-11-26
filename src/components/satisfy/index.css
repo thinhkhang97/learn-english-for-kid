@@ -5,35 +5,92 @@
     background-image: url('./images/background.jpg');
 }
 
-.logo {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-  }
+.left-container {
+    width: 100vh;
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+}
 
-.menu {
-    position: fixed;
-    right: 0%;
-    height: 100%;
+.right-container {
+    height: 100vh;
+    flex: 0 1 80px;
+}
+
+/* Left container */
+ .left-container .header {
+    flex: 0 1 50px;
+    display: flex;
+    align-items: center;
+}
+
+.satisfy-container .left-container .content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 30px;
 }
 
 piechart {
-    position: fixed;
-    top: 170px;
-    left: 2%;
     height: 70%;
     width: 45%;
     background-color: white;
+    border-radius: 20px;
 }
   
 barchart {
-    position: fixed;
-    top: 105px;
-    left: 6%;
     height: 80%;
     width: 45%;
     background-color: white;
+    border-radius: 20px;
 }
+
+.content .area {
+    flex: 1 1 auto;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.area .title {
+    color: orange;
+    font-weight: 700;
+    margin: 10px 0;
+    font-size: 28px;
+}
+
+.area img{
+    max-width: 160px;
+    max-height: 160px;
+}
+
+.area .cell {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 200px;
+    margin: 20px 0;
+}
+
+.area  {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 4s;
+    transition-duration: 4s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .area :hover, .area :focus, .area :active {
+    -webkit-transform: scale(1.1) rotate(35deg);
+    transform: scale(1.1) rotate(15deg);
+    /* cursor: url('./images/rocket2.png'), auto; */
+  }
