@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 class Home extends Component {
     render() {
         return (
-            <div className='container' >
+            <div className='home-container' >
                 <div className='left-container'>
                     <div className='header'>
                         <img src={require('./images/logo.png')} onClick={() => console.log('click logo')} />
                     </div>
-                    <div className='content'>
+                    <div className='home-content'>
                         <div className='area'>
                             <div className='title'>
                                 Chơi game

@@ -1,0 +1,25 @@
+body {
+  background-image: url("./image/Outer_space_stars_2560x1600.jpg");
+}
+.topics {
+    height: auto;
+    /* background-color: #52741E; */
+    background-color: white;
+    border-radius: 10px;
+    height: 500px;
+  }
+  
+  .topic-details {
+    height: auto;
+    background-color: white; 
+    border-radius: 10px;
+    height: 500px;
+  }
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}

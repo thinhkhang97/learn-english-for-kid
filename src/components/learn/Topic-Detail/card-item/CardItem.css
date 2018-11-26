@@ -1,0 +1,18 @@
+.img-custom {
+    height: 75px;
+    width: 75px;
+}
+
+.card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 85px;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -16,7 +16,6 @@
     height: 100vh;
     flex: 0 1 80px;
 }
-
 /* Left container */
  .left-container .header {
     flex: 0 1 50px;
@@ -24,7 +23,7 @@
     align-items: center;
 }
 
-.satisfy-container .left-container .content {
+.satisfy-container .left-container .sas-content {
     flex: 1 1 auto;
     display: flex;
     flex-flow: row;

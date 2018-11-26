@@ -47,7 +47,7 @@ class Satisfy extends Component {
                         <img src={require('./images/logo.png')} onClick={() => 
                             console.log('click logo')} />
                     </div>
-                    <div className='content'>
+                    <div className='sas-content'>
                         <piechart class="col-sm-5">
                             <form>
                                 <div class="form-group">
