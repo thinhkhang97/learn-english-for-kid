@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './index.css';
 import Menu from '../navigation';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 class Home extends Component {
     render() {
         return (
@@ -18,7 +19,7 @@ class Home extends Component {
                             <img src={require('./images/islam.png')} onClick={() => console.log('click logo')} />
                         </div>
                         <div className='area'>
-                            <Link to='/learn'>
+                            <Link to={this.props.isLogin===null ? '/login':'/learn'}>
                             <div className='cell'>
                                 <div className='title'>
                                     Học
@@ -48,5 +49,9 @@ class Home extends Component {
         );
     }
 }
-
-export default Home;
+const mapStateToProps = state => {
+    return {
+        isLogin: state.account
+    }
+}
+export default connect(mapStateToProps)(Home);
