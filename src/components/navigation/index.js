@@ -25,7 +25,7 @@ class Menu extends Component {
                     <ReactTooltip />
                 </div>
                 <div className='menu-item'>
-                    <Link to='/satisfy'>
+                    <Link to={this.props.isLogin===null ? '/login' : '/satisfy'}>
                         <img src={require('./images/diagram.png')} data-tip='Thống kê' />
                         <ReactTooltip />
                     </Link>

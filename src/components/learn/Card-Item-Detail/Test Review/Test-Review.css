@@ -1,0 +1,9 @@
+.input-character {
+    border: none;
+    border-bottom: 4px solid black;
+    width: 30px;
+    background-color: #FFA500;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 9px;
+}

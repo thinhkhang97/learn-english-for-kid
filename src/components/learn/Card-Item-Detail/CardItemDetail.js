@@ -13,11 +13,12 @@ import { faEnvelope, faKey, faCaretLeft, faCaretRight } from '@fortawesome/free-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import CardAbove from './Card-Above'
 import CardBehide from './Card-Behide'
+import TestReview from './Test Review/Test-Review'
 
 library.add(faEnvelope, faKey, faCaretLeft, faCaretRight);
 
 class CardItemDetail extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -25,8 +26,13 @@ class CardItemDetail extends Component {
             topicId: this.props.topicId,
             isVisible: true,
             isLeft: true,
-            isAbove: true
+            isAbove: true,
+            isReview: this.props.isReview
         }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({isReview: nextProps.isReview});
     }
 
     onClickLeft = () => {
@@ -59,7 +65,7 @@ class CardItemDetail extends Component {
         return (
             <div>                
                 <div class="container">
-                    <SideBarNumber index = {this.state.index}/>
+                    <SideBarNumber index = {this.state.index} onClickOnSideBar={(index) => this.setState({index: index})}/>
                     <div class='row mt-3 mb-3 card-above'>
                         <div class='arrow-left col-3'>
                             <span class='left-title' onClick={this.onClickLeft}>
@@ -68,13 +74,18 @@ class CardItemDetail extends Component {
                         </div>                                                     
                         <div className='col-6' onClick={this.onClickChangeFace}> 
                             {
-                                this.state.isAbove ? 
+                                this.state.isAbove && !this.state.isReview ? 
                                     <CardAbove  isVisible={this.state.isVisible} 
                                                 isLeft = {this.state.isLeft} 
                                                 topicId = {this.state.topicId} 
                                                 index = {this.state.index} />                            
-                                :
+                                :   !this.state.isAbove && !this.state.isReview ?
                                     <CardBehide isVisible={this.state.isVisible} 
+                                                isLeft = {this.state.isLeft} 
+                                                topicId = {this.state.topicId} 
+                                                index = {this.state.index}/>
+                                :
+                                    <TestReview isVisible={this.state.isVisible} 
                                                 isLeft = {this.state.isLeft} 
                                                 topicId = {this.state.topicId} 
                                                 index = {this.state.index}/>
