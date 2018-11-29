@@ -1,10 +1,10 @@
 This project is used for Design UI in HCMUS
 Login with account: demo demo
 
-#Run
+##Run
 
-## npm install
+### npm install
 
-## npm i yarn-install
+### npm i yarn-install
 
-## yarn start
+### yarn start
