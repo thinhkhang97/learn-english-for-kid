@@ -39,12 +39,12 @@ class Register extends Component {
         }
         return (
             <div className='register-container'>
-                    <div className='area-1'>
+                    <div className='area-1 d-flex align-items-center  justify-content-center' >
                         <Link 
                         style={{
-                        height: '50%'
-                        , display:'flex', justifyContent: 'center', alignItems: 'center'}} to='/'>
-                            <img src={require('../../../images/logo/logo.svg')} />
+                            width: '70%'}} 
+                         to='/'>
+                             <img alias = 'none' src={require('../../../images/logo/logo.svg')} /> 
                         </Link>
                     </div>
                
